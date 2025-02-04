@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <!-- Class mapping -->
+    <class name="model.UserProfile" table="user_profile">
+        <!-- Primary key mapping -->
+        <id name="id" column="ID" type="string"> 
+        </id>
+        <!-- Property mappings -->
+        <property name="username" column="username" type="string" />
+        <property name="firstname" column="firstname" type="string" />
+        <property name="lastName" column="lastName" type="string" />
+        <property name="bio" column="bio" type="string" />
+        
+    </class>
+</hibernate-mapping>
