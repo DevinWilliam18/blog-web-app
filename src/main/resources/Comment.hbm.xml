@@ -5,15 +5,17 @@
 
 <hibernate-mapping>
     <!-- Class mapping -->
-    <class name="model.UserProfile" table="user_profile">
+    <class name="model.Comment" table="comment">
         <!-- Primary key mapping -->
         <id name="id" column="id" type="string"> 
         </id>
+       
+       	<!-- one to one -->
+       	
         <!-- Property mappings -->
-        <property name="username" column="username" type="string" />
-        <property name="firstname" column="firstname" type="string" />
-        <property name="lastName" column="lastName" type="string" />
-        <property name="bio" column="bio" type="string" />
+        <property name="commentContent" column="comment_content" type="string" />
+        <property name="createdAt" column="created_at" type="timestamp" />
+        <property name="updatedAt" column="updated_at" type="timestamp" />
         
     </class>
 </hibernate-mapping>

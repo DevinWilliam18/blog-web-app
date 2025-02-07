@@ -8,7 +8,7 @@ import javax.persistence.Table;
 public class Post {
 	
 	private String id;
-	private String userId;
+	private UserProfile userProfile;
 	private String title;
 	private String content;
 	private Timestamp createdAt;
