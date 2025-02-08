@@ -9,5 +9,18 @@
         <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/postgres</property>
         <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <!-- Echo all executed SQL to stdout -->
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        
+        <!-- Mapping files -->
+        <mapping resource="Comment.hbm.xml"/>
+        <mapping resource="Post.hbm.xml"/>
+        <mapping resource="Tag.hbm.xml"/>
+        <mapping resource="UserAuth.hbm.xml"/>
+        <mapping resource="UserProfile.hbm.xml"/>                        
+                
     </session-factory>
 </hibernate-configuration>
