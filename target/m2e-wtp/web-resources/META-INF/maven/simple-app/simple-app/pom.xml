@@ -56,15 +56,25 @@
 	<dependency>
 	    <groupId>org.postgresql</groupId>
 	    <artifactId>postgresql</artifactId>
-	    <version>42.3.3</version>
+	    <version>9.2-1003-jdbc4</version>
 	</dependency>
 	<dependency>
 	    <groupId>org.hibernate</groupId>
 	    <artifactId>hibernate-core</artifactId>
-	    <version>5.6.15.Final</version>
+	    <version>5.0.2.Final</version>
 	</dependency>
   </dependencies>  
   <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version>
+            <configuration>
+                <executable>${JAVA_HOME}/bin/javac</executable>
+            </configuration>
+        </plugin>
+    </plugins>  
     <finalName>simple-app</finalName>
   </build>
 </project>
